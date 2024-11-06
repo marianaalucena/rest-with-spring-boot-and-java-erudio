@@ -40,7 +40,7 @@ public class PersonController {
 	
 	@PostMapping(produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML},
 			consumes = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
-	public PersonVo create(@RequestBody PersonVo person){
+	public PersonVo create(@RequestBody PersonVo person) throws Exception{
 		return service.create(person);
 	}
 	
@@ -52,7 +52,7 @@ public class PersonController {
 	
 	@PutMapping(produces = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML},
 			consumes = {MediaType.APPLICATION_JSON, MediaType.APPLICATION_XML, MediaType.APPLICATION_YML})
-	public PersonVo update(@RequestBody PersonVo person){
+	public PersonVo update(@RequestBody PersonVo person) throws Exception{
 		return service.update(person);
 	}
 
